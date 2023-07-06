@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #1877F2;
+            display:grid;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .enter {
+            background-color: #1877F2;
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #1877F2;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr class="enter">
+                <td colspan="2"><p>Enter the system</p></td>
+            </tr>
+            <tr>
+                <td colspan="2"><p>It is necessary to login to your account in order to sign in for a course</p></td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="1"><strong>ARE YOU NEW? REGISTER</strong></td>
+                <td>Already have account?</td>
+            </tr>
+            <tr>
+                <td style="padding-right: 70px;"><input type="text" name="username" placeholder="Username"></td>
+                <td style="padding-right: 70px;"><input type="text" name="alreadyusername" placeholder="Username"></td>
+            </tr>
+            <tr>
+                <td style="padding-right: 70px;"><input type="email" name="email" placeholder="Email"></td>
+                <td style="padding-right: 70px;"><input type="password" name="alreadypassword" placeholder="Password"></td>
+            </tr>
+            <tr>
+                <td style="padding-right: 70px;"><input type="password" name="password" placeholder="Password"></td>
+
+                <td style="text-align: right;"><input type="checkbox"  id="remembercheckbox"><label for="remembercheckbox">Remember me!</label></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit" name="login" value="Login">Login</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit" name="register" value="Register">Register</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

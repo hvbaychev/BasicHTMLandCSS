@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 50%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1px">
+        <tr>
+            <td id="result"></td>
+        </tr>
+    </table>
+    <table border="1px">
+        <tr>
+            <td><button onclick="handleButtonClick(1)">1</button></td>
+            <td><button onclick="handleButtonClick(2)">2</button></td>
+            <td><button onclick="handleButtonClick(3)">3</button></td>
+            <td><button onclick="handleButtonClick('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="handleButtonClick(4)">4</button></td>
+            <td><button onclick="handleButtonClick(5)">5</button></td>
+            <td><button onclick="handleButtonClick(6)">6</button></td>
+            <td><button onclick="handleButtonClick('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="handleButtonClick(7)">7</button></td>
+            <td><button onclick="handleButtonClick(8)">8</button></td>
+            <td><button onclick="handleButtonClick(9)">9</button></td>
+            <td><button onclick="handleButtonClick('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="handleButtonClick('C')">C</button></td>
+            <td><button onclick="handleButtonClick(0)">0</button></td>
+            <td><button onclick="handleButtonClick('=')">=</button></td>
+            <td><button onclick="handleButtonClick('/')">/</button></td>
+        </tr>
+    </table>
+
+    <script>
+        let currentValue = '';
+        let currentOperator = '';
+        let result = '';
+
+        function handleButtonClick(value) {
+            if (typeof value === 'number' || value === '0') {
+                currentValue += value;
+            } else if (value === '+' || value === '-' || value === '*' || value === '/') {
+                if (currentValue !== '') {
+                    currentOperator = value;
+                    result += currentValue + ' ' + currentOperator + ' ';
+                    currentValue = '';
+                }
+            } else if (value === '=') {
+                if (currentValue !== '' && currentOperator !== '') {
+                    result += currentValue + ' = ';
+                    calculateResult();
+                }
+            } else if (value === 'C') {
+                currentValue = '';
+                currentOperator = '';
+                result = '';
+            }
+            document.getElementById('result').innerText = result + currentValue;
+        }
+
+        function calculateResult() {
+            let num1 = parseFloat(result);
+            let num2 = parseFloat(currentValue);
+            let calculatedValue = 0;
+
+            switch (currentOperator) {
+                case '+':
+                    calculatedValue = num1 + num2;
+                    break;
+                case '-':
+                    calculatedValue = num1 - num2;
+                    break;
+                case '*':
+                    calculatedValue = num1 * num2;
+                    break;
+                    case '/':
+                    if (num2 !== 0) {
+                        calculatedValue = num1 / num2;
+                    } else {
+                        calculatedValue = "Error: Division by zero";
+                    }
+                    break;
+            }
+
+            result = calculatedValue.toString();
+            currentValue = '';
+            currentOperator = '';
+        }
+
+        document.getElementById('result').innerText = result;
+    </script>
+</body>
+
+</html>
+

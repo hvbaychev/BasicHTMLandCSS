@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            background-color: pink;
+            width: 80%;
+            display: inline-block;
+            border: 0;
+        }
+
+        .random-text {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <fieldset class="fieldset">
+            <h1 style="text-align: center;">PROFILE</h1>.
+            <fieldset style="width: 20%;">
+                <dd>
+                    <p class="random-text">User: Kent</p>
+                </dd>
+                <figure>
+                    <img src="kent.jpg" alt="kent" style="width:50%;">
+                </figure>
+                <dd>
+                    <p class="random-text">Profile complete:</p>
+                </dd>
+                <progress value="22" max="100"></progress>
+            </fieldset>
+            <fieldset style="width: 20%;">
+                <p>Upload audio file:</p>
+                <audio controls autoplay style="background-color: black; width: 100%;">
+                    <source src="somesong.ogg" type="audio/ogg">
+                    <source src="somesong.mp3" type="audio/mpeg">
+                    Your browser do not support the audio element.
+                </audio>
+                <audio controls>
+                    <source src="somesong.ogg" type="audio/ogg">
+                    <source src="somesong.mp3" type="audio/mpeg">
+                    Your browser do not support the audio element.
+                </audio>
+                <audio controls>
+                    <source src="somesong.ogg" type="audio/ogg">
+                    <source src="somesong.mp3" type="audio/mpeg">
+                    Your browser do not support the audio element.
+                </audio>
+            </fieldset>
+            <fieldset style="width: 50%;">
+                <video width="200" height="" controls poster="kent.jpg">
+                    <source src="https://www.youtube.com/watch?v=kTJPi_PcARA" type="video/mp4">
+                    Your browser do not support the video tag.
+                </video>
+            </fieldset>
+        </fieldset>
+    </div>
+</body>
+
+</html>

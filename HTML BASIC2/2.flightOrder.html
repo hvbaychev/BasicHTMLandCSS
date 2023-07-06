@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: darkblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgb(100, 49, 49);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .small-input {
+            width: 30px;
+            height: 20px;
+            padding: 2px;
+            font-size: 12px;
+        }
+
+        .number-range {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td><strong>FLIGHT ORDER</strong></td>
+            </tr>
+            <tr>
+                <td><strong><i>FROM:</i></strong></td>
+                <td><strong><i>TO:</i></strong></td>
+            </tr>
+            <tr>
+                <td>
+                    <select>
+                        <option value="1">Burgas</option>
+                        <option value="2">Varna</option>
+                        <option value="3">Sofia</option>
+                    </select>
+                <td>
+                    <select>
+                        <option value="4">Munchen</option>
+                        <option value="5">London</option>
+                    </select>
+                </td>
+                </td>
+            <tr>
+                <td colspan="2" style="text-align: right;"><input type="checkbox" id="direct"><label
+                        for="direct"><i>Prefer direct!</i></label></td>
+            </tr>
+            </tr>
+            <tr>
+                <td><i>Departure Date</i></td>
+                <td><i>Time Interval</i></td>
+            </tr>
+            <tr>
+                <td><input type="date"></td>
+                <td><input type="time" max="24:00" min="00:00"></td>
+                <td><input type="time" max="24:00" min="00:00"></td>
+            </tr>
+            <tr>
+                <td><i>Return Date</i></td>
+                <td ><i>Time Interval</i></td>
+            </tr>
+            <tr>
+                <td><input type="date"></td>
+                <td><input type="time" max="24:00" min="00:00"></td>
+                <td><input type="time" max="24:00" min="00:00"></td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <i class="number-range">12+</i>
+                        <i class="number-range">2-12</i>
+                        <i class="number-range">0-2</i>
+                        <td><i>Choose class:</i></td>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="number" class="small-input"> <input type="number" class="small-input">
+                    <input type="number" class="small-input"></td>
+                <td><select name="class">
+                    <option value="1">Economy</option>
+                    <option value="2">Lux</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right;">
+                    <button type="submit" name="search" value="search">Search</button>
+                </td>
+            </tr>
+            
+        </table>
+    </div>
+</body>
+
+</html>
